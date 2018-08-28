@@ -52,7 +52,7 @@ package:
 
 functions:
   hello:
-    handler: com.serverless.Handler
+    handler: com.serverless.handlers.HelloHandler
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -98,6 +98,17 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+  bye:
+    handler: com.serverless.handlers.ByeHandler
+
+    #    The following are a few example events you can configure
+    #    NOTE: Please make sure to change your handler code to work with those events
+    #    Check the event documentation for details
+    events:
+    - http:
+        path: bye
+        method: get
 
 plugins:
   - serverless-prune-plugin
